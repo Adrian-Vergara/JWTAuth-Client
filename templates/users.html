@@ -1,0 +1,72 @@
+	<center>
+		<h1>Registro de Usuarios AngularJS/Laravel</h1><hr>
+
+		<form style="width: 50%;" ng-submit="vm.registrar()">
+			<div class="form-group">
+				<label>Nombre</label>
+				<input type="text" class="form-control" placeholder="Nombre" ng-model="vm.usuario.nombre" required="required">
+			</div>
+			<div class="form-group">
+				<label>Apellido</label>
+				<input class="form-control" type="text" ng-model="vm.usuario.apellido" required="required" placeholder="Apellido">
+			</div>
+			<div class="form-group">
+				<label>Email</label>
+				<input type="email" class="form-control" placeholder="example@gmail.com" ng-model="vm.usuario.email" required="required">
+			</div>
+			<div class="form-group">
+				<label>Password</label>
+				<input type="password" class="form-control" placeholder="Secret" ng-model="vm.usuario.password" required="required">
+			</div>
+			<button type="submit" class="btn btn-primary">Registrar</button>
+			<button type="reset" class="btn btn-warning">Limpiar</button>
+		</form>
+		<hr>
+
+		<h1>Consulta de Usuarios</h1>
+		<table class="table table-responsive" style="width: 70%;">
+			<tr>
+				<td>id</td>
+				<td>Nombre</td>
+				<td>Apellido</td>
+				<td>Email</td>
+				<td>Modificar</td>
+				<td>Eliminar</td>
+			</tr>
+			<tr ng-repeat="user in vm.usuarios">
+				<td>{{user.id}}</td>
+				<td>{{user.nombre}}</td>
+				<td>{{user.apellido}}</td>
+				<td>{{user.email}}</td>
+				<td><button class="btn btn-warning" ng-click="vm.datos($index)">Modificar</button></td>
+				<td><button class="btn btn-danger">Eliminar</button></td>
+			</tr>
+		</table>
+		<hr>
+
+		<h1>Actualizar Usuarios</h1>
+		<hr>
+
+		<form style="width: 50%;" ng-submit="vm.actualizar()">
+			<div class="form-group">
+				<label>Nombre</label>
+				<input type="text" class="form-control" placeholder="Nombre" ng-model="vm.usuarioModi.nombre" required="required">
+			</div>
+			<div class="form-group">
+				<label>Apellido</label>
+				<input class="form-control" type="text" ng-model="vm.usuarioModi.apellido" required="required" placeholder="Apellido">
+			</div>
+			<div class="form-group">
+				<label>Email</label>
+				<input type="email" class="form-control" placeholder="example@gmail.com" ng-model="vm.usuarioModi.email" required="required">
+			</div>
+			<div class="form-group">
+				<label>Password</label>
+				<input type="password" class="form-control" placeholder="Secret" ng-model="vm.usuarioModi.password" required="required">
+			</div>
+			<button type="submit" class="btn btn-primary">Registrar</button>
+			<button type="reset" class="btn btn-warning">Limpiar</button>
+		</form>
+		<br><br>
+
+	</center>

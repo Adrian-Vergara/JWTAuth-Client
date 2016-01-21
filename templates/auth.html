@@ -1,0 +1,17 @@
+<div class="col-sm-4 col-sm-offset-4" style="margin-top: 50px;">
+    <div class="well">
+        <h3>Login</h3>
+        <form ng-submit="vm.login()">
+            <div class="form-group">
+                <label>Email</label>
+                <input type="email" class="form-control" placeholder="example@gmail.com" ng-model="vm.credenciales.email" required="required">
+            </div>
+            <div class="form-group">
+                <label>Password</label>
+                <input type="password" class="form-control" placeholder="Secret" ng-model="vm.credenciales.password" required="required">
+            </div>
+            <button type="submit" class="btn btn-primary">Registrar</button>
+            <button type="reset" class="btn btn-warning">Limpiar</button>
+        </form>
+    </div>
+</div>
